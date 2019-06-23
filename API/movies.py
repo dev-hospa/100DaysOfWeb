@@ -8,7 +8,7 @@ from apistar.http import JSONResponse
 # helpers
 def _load_movies_data():
     with open("movies_data.json", "r", encoding="utf-8") as f:
-        movies = json.loads(f.read())[:5]
+        movies = json.loads(f.read())
         return {movie["id"]: movie for movie in movies}
 
 # load data
