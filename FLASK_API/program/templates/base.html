@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- load MUI -->
+    <link href="//cdn.muicss/mui-0.9.39/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss/mui-0.9.39/js/mui.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This is our site</title>
+</head>
+<body>
+    <div class="mui-panel">Menu Bar -
+        <button class="mui-btn mui-btn--raised"><a href="/index">Home</a></button>
+        <button class="mui-btn mui-btn--raised"><a href="/star_wars">Star Wars</a></button>
+    </div>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
