@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS is Fun!</title>
+  <style>
+    body {
+      width: 800px;
+      margin: 0 auto;
+    }
+    #result {
+      font-size: 200%;
+      font-weight: bold;
+    }
+    #result, #calculateForm {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Basic JS Calculator</h1>
+
+  <form id="calculateForm">
+    <input id="num1">
+    <select id="operator">
+      <option name="+">+</option>
+      <option name="-">-</option>
+      <option name="*">*</option>
+      <option name="/">/</option>
+    </select>
+    <input id="num2">
+    <button type="button" id="calculate" onclick="doCalculation();">Calculate!</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script type="text/javascript">
+  function doCalculation(){
+    num1 = parseInt(document.getElementById("num1").value);
+    num2 = parseInt(document.getElementById("num2").value);
+    operator = document.getElementById("operator").value;
+
+    if(operator === "+"){
+      result = num1 + num2;
+    } else if(operator === "-"){
+      result = num1 - num2;
+    } else if(operator === "*"){
+      result = num1 * num2;
+    } else {
+        result = num1 / num2;
+    }
+    
+    let outcome = document.getElementById("result")
+    outcome.innerHTML = result;
+    if(isNaN(result) || !isFinite(result)){
+      outcome.style.color = "red";
+    } else {
+      outcome.style.color = "darkblue";
+    }
+  }
+  </script>
+
+</body>
+</html>
